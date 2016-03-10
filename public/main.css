@@ -1,0 +1,28 @@
+/*
+Button
+
+It's a freaking button.
+
+Markup:
+<button class="button {{modifier_class}}">Example</button>
+
+.button-red - a freakin red button
+:hover - Highlight the button when hovered.
+:visited - state of button after being visited
+
+Styleguide Button
+ */
+.button {
+  color: red;
+  border: 1px solid black;
+}
+.button:hover {
+  background-color: aquamarine;
+}
+.button:visited {
+  background-color: pink;
+}
+.button.button-red {
+  background-color: red;
+  color: white;
+}
