@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>kss-node Styleguide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/main.css">
+
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">Piet Mondrian - Styleguide</a></h1>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="Form">
+              <li class="kss-menu-item"><a href="./"><span class="kss-name">Overview</span></a></li>
+              <li class="kss-menu-item"><a href="section-Button.html"><span class="kss-name">Button</span></a></li>
+              <li class="kss-menu-item"><a href="section-Form.html"><span class="kss-name">Form</span></a></li>
+              <li class="kss-menu-item"><a href="section-Stamps.html"><span class="kss-name">Stamps</span></a></li>
+              <li class="kss-menu-item"><a href="section-Typography.html"><span class="kss-name">Typography</span></a></li>
+            </ul>
+            <ul class="kss-menu-child">
+              <li class="kss-menu-item"><a href="#section-Form - Input"><span class="kss-ref">Form - Input</span><span class="kss-name">Input</span></a></li>
+              <li class="kss-menu-item"><a href="#section-Form - Radio Button"><span class="kss-ref">Form - Radio Button</span><span class="kss-name">Radio Buttons</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          <section id="section-Form" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">Form</span> Form</h1>
+          </section>
+          <section id="section-Form - Input" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">Form - Input</span> Input</h1>
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <form>
+  <label for="firstname" class="[modifier class]">First Name</label>
+  <input type="text" class="formInput [modifier class]" name="firstname"><br>
+</form>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:focus</div>
+                  <div class="kss-modifier-description">
+                    The focus state when user is typing.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <form>
+  <label for="firstname" class="pseudo-class-focus">First Name</label>
+  <input type="text" class="formInput pseudo-class-focus" name="firstname"><br>
+</form>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.is-error</div>
+                  <div class="kss-modifier-description">
+                    When an input is invalid.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <form>
+  <label for="firstname" class="is-error">First Name</label>
+  <input type="text" class="formInput is-error" name="firstname"><br>
+</form>
+                </div>
+              </div>
+              <div class="kss-markup">
+                <pre><code class="lang-html">&lt;form&gt;
+  &lt;label for=&quot;firstname&quot; class=&quot;[modifier class]&quot;&gt;First Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; class=&quot;formInput [modifier class]&quot; name=&quot;firstname&quot;&gt;&lt;br&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+          <section id="section-Form - Radio Button" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">Form - Radio Button</span> Radio Buttons</h1>
+            <div class="kss-description">
+              <p>These are single-option selects.</p>
+
+            </div>
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <form>
+    <h2>What is "De Stijl"?</h2>
+    <input type="radio" class="formRadioButton"/><label class="inline">A Dutch artistic movement founded in 1917</label><br/>
+    <input type="radio" class="formRadioButton"/><label class="inline">A Dutch phrase that translates to "The Style"</label><br/>
+    <input type="radio" class="formRadioButton"/><label class="inline">Neoplasticism</label><br/>
+    <input type="radio" class="formRadioButton" checked/><label class="inline">All of the above</label>
+</form>
+                </div>
+              </div>
+              <div class="kss-markup">
+                <pre><code class="lang-html">&lt;form&gt;
+    &lt;h2&gt;What is &quot;De Stijl&quot;?&lt;/h2&gt;
+    &lt;input type=&quot;radio&quot; class=&quot;formRadioButton&quot;/&gt;&lt;label class=&quot;inline&quot;&gt;A Dutch artistic movement founded in 1917&lt;/label&gt;&lt;br/&gt;
+    &lt;input type=&quot;radio&quot; class=&quot;formRadioButton&quot;/&gt;&lt;label class=&quot;inline&quot;&gt;A Dutch phrase that translates to &quot;The Style&quot;&lt;/label&gt;&lt;br/&gt;
+    &lt;input type=&quot;radio&quot; class=&quot;formRadioButton&quot;/&gt;&lt;label class=&quot;inline&quot;&gt;Neoplasticism&lt;/label&gt;&lt;br/&gt;
+    &lt;input type=&quot;radio&quot; class=&quot;formRadioButton&quot; checked/&gt;&lt;label class=&quot;inline&quot;&gt;All of the above&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/kss-node/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/highlight.pack.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    
+  </body>
+</html>

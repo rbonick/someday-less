@@ -1,28 +1,211 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One|Open+Sans:300italic,300,400,700);
+/*
+Headers
+
+H1 uses Poiret One at 76px font size.
+H2 uses Open Sans at 18px font size, in all uppercase.
+H3 uses Open Sans Light Italic at 36px font size.
+
+Markup:
+<h1>h1 Sans</h1>
+<h2>h2 Sans</h2>
+<h3>h3 Sans</h3>
+
+Styleguide Typography - Headers
+*/
+h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 76px;
+  font-size: 7.6rem;
+  margin: 40px 0;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1b42d4;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-size: 3.6rem;
+  font-weight: 300;
+  font-style: italic;
+}
+/*
+Paragraphs
+
+The paragraph default is 15px Open Sans.
+
+Markup:
+<p>
+    Twee organic microdosing sustainable vegan, distillery vice seitan affogato
+    four loko tousled gentrify semiotics ethical. Skateboard franzen readymade gastropub,
+    gentrify hoodie cornhole hella authentic crucifix man bun stumptown mumblecore next
+    level. Sriracha YOLO keytar drinking vinegar cred, hella sustainable ramps cronut bitters
+    celiac polaroid shabby chic.
+</p>
+<p>
+    Mustache slow-carb 8-bit try-hard. Aesthetic meditation
+    bushwick, bespoke crucifix next level pop-up iPhone small batch meggings tilde yuccie
+    salvia echo park. Meditation helvetica green juice you probably haven't heard of them,
+    8-bit cronut knausgaard roof party. Vegan tumblr fanny pack, synth tacos kitsch kinfolk
+    vice next level man bun cold-pressed.
+</p>
+
+Styleguide Typography - Paragraphs
+*/
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+/*
+Links
+
+Links utilize the Mondrian Blue color.
+
+Markup:
+<a href="#">This is a link</a>
+
+Styleguide Typography - Links
+*/
+a {
+  font-family: 'Open Sans', sans-serif;
+  color: #1b42d4;
+  text-decoration: underline ;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
 /*
 Button
 
-It's a freaking button.
+The standard button. Can be used on buttons, links, or input submits.
 
 Markup:
-<button class="button {{modifier_class}}">Example</button>
+<button class="button {{modifier_class}}">Button</button>
+<a href="#" class="button {{modifier_class}}">Link</a>
+<input type="submit" class="button {{modifier_class}}" value="Submit">
 
-.button-red - a freakin red button
-:hover - Highlight the button when hovered.
-:visited - state of button after being visited
+:hover - The standard button's hover state.
+.button--inverted - The button in an inverted state.
+.button--inverted:hover - The inverted button's hover state.
+.button--red - The button in a red state.
+.button--red:hover - The hover button state.
 
-Styleguide Button
+Styleguide Button - Button
  */
+/*
+*/
 .button {
-  color: red;
-  border: 1px solid black;
+  background-color: #000000;
+  color: #ffffff;
+  border: 3px solid #000000;
+  padding: 15px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
 }
 .button:hover {
-  background-color: aquamarine;
+  background-color: #1b42d4;
 }
-.button:visited {
-  background-color: pink;
+.button.button--inverted {
+  background-color: #ffffff;
+  color: #000000;
 }
-.button.button-red {
-  background-color: red;
-  color: white;
+.button.button--inverted:hover {
+  background-color: #fbfb3b;
+}
+.button.button--red {
+  background-color: #ff0000;
+}
+.button.button--red:hover {
+  background-color: #000000;
+}
+.button + .button {
+  margin-left: 20px;
+}
+/*
+Radio Buttons
+
+These are single-option selects.
+
+Markup:
+<form>
+    <h2>What is "De Stijl"?</h2>
+    <input type="radio" class="formRadioButton"/><label class="inline">A Dutch artistic movement founded in 1917</label><br/>
+    <input type="radio" class="formRadioButton"/><label class="inline">A Dutch phrase that translates to "The Style"</label><br/>
+    <input type="radio" class="formRadioButton"/><label class="inline">Neoplasticism</label><br/>
+    <input type="radio" class="formRadioButton" checked/><label class="inline">All of the above</label>
+</form>
+
+Styleguide Form - Radio Button
+*/
+/*
+Input
+
+Markup:
+<form>
+  <label for="firstname" class="{{modifier_class}}">First Name</label>
+  <input type="text" class="formInput {{modifier_class}}" name="firstname"><br>
+</form>
+
+:focus - The focus state when user is typing.
+.is-error - When an input is invalid.
+
+Styleguide Form - Input
+*/
+.formInput {
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: all 0.35s ease;
+  max-width: 300px;
+}
+.formInput:focus {
+  border-color: #1b42d4;
+  outline: none;
+}
+.formInput.is-error {
+  border-color: #ff0000;
+}
+label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  display: block;
+}
+label.is-error {
+  color: #ff0000;
+}
+label.inline {
+  margin-left: 15px;
+  display: inline-block;
+}
+html,
+body {
+  font-size: 10px;
 }
